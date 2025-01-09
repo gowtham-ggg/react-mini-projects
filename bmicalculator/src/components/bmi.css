@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    background-color: #ffffff;
+    width: 80vw;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.image {
+    width: 50%;
+    background-image: url("/public/assets/body-mass-index.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.content {
+    padding: 20px;
+    width: 50%;
+    border-radius: 20px;
+    border: 2px solid rgb(17, 174, 236);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.533);
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: rgb(16, 179, 244);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: rgb(11, 173, 237);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 10px 15px rgb(2, 61, 85);
+}
+
+.display {
+    border: 2px solid rgb(17, 174, 236);
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.459);
+}
+
+.display h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: green;
+}
+
+.display p {
+    font-size: 1rem;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .image {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+    }
+
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        gap: 20px;
+        width: 85vw;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    input[type="number"] {
+        width: 80%;
+    }
+
+    button {
+        width: 50%;
+        padding: 12px;
+    }
+
+    .display h4 {
+        font-size: 1rem;
+    }
+
+    .display p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8f7f7, #d9f2d9);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.main-container {
+    background: linear-gradient(135deg, #6a9c78, #2e2e2e);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    padding: 30px 40px; /* Reduced padding for smaller screens */
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-container h1 {
+    color: #fff;
+    font-size: 24px; /* Reduced size for smaller screens */
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-container img {
+    padding: 10px;
+    margin: 20px 0;
+    border: 5px solid white;
+    border-radius: 10px;
+    object-fit: cover;
+    max-width: 100%; /* Ensure image scales down on smaller screens */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.main-container label {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ddd;
+    align-self: flex-start;
+}
+
+.main-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 14px; /* Reduced size for smaller screens */
+    outline: none;
+    background: #555;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.main-container input:hover {
+    background: #666;
+    transform: scale(1.02);
+}
+
+.main-container input:focus {
+    background: #4facfe;
+    color: #fff;
+    box-shadow: 0 0 10px #4facfe;
+}
+
+.main-container .button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 15px; /* Reduced margin for smaller screens */
+    font-size: 14px; /* Reduced size for smaller screens */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-container .generate {
+    background: linear-gradient(90deg, #fc466b, #3f5efb);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.main-container .generate:hover {
+    background: linear-gradient(90deg, #ff7f50, #1e90ff);
+    box-shadow: 0 6px 20px rgba(63, 94, 251, 0.6);
+    transform: translateY(-4px);
+}
+
+.main-container .download {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.main-container .download:hover {
+    background: linear-gradient(90deg, #00b09b, #96c93d);
+    box-shadow: 0 6px 20px rgba(56, 239, 125, 0.6);
+    transform: translateY(-4px);
+}
+
+.main-container p {
+    font-size: 12px; /* Reduced size for smaller screens */
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.main-container a {
+    color: #38ef7d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-container a:hover {
+    color: #96c93d;
+    text-decoration: underline;
+}
+
+/* Add subtle animations */
+.main-container input,
+.main-container .button {
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-container {
+        padding: 25px 20px; /* Reduce padding */
+        width: 95vw;
+    }
+
+    .main-container h1 {
+        font-size: 22px; /* Smaller heading */
+    }
+
+    .main-container input,
+    .main-container .button {
+        font-size: 13px; /* Reduce text size */
+        padding: 10px;
+    }
+
+    .main-container img {
+        max-width: 80%; /* Shrink image on smaller screens */
+    }
+
+    .main-container p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 20px 15px; /* Further reduce padding */
+        width: 95vw;
+    }
+
+    .main-container h1 {
+        font-size: 20px; /* Even smaller heading */
+    }
+
+    .main-container input,
+    .main-container .button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .main-container img {
+        max-width: 100%; /* Ensure full width for images */
+    }
+
+    .main-container p {
+        font-size: 10px;
+    }
+}

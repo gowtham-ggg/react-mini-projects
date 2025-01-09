@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Main container styling */
+.main-container {
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    padding: 20px;
+    font-family: Poppins;
+    color: #fff;
+}
+
+/* Question container styling */
+.question-container {
+    background: #fff;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.question-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Question styling */
+.question {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Answer container styling */
+.answer-container {
+    background: #f9f9f9;
+    padding: 15px;
+    display: none; /* Hidden by default */
+    transition: max-height 0.3s ease;
+}
+
+.answer-container.active {
+    display: block;
+}
+
+/* Answer styling */
+.answer {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Add some animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.answer-container.active .answer {
+    animation: fadeIn 0.5s ease-in-out;
+}
